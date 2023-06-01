@@ -1,0 +1,35 @@
+# Django project
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pyc
+*.bak
+*.swp
+
+# Secret key
+*.env
+
+# Development
+*.log
+*.pyc
+local_settings.py
+
+# Static files
+.DS_Store
+
+# Media files
+/media/
+
+# Virtual environment
+venv/
+.env
+
+# IDE-specific files (optional)
+.vscode/
+.idea/
+*.iml
+*.pydevproject
+*.pyc
+*.pyo
+*.orig
