@@ -13,5 +13,19 @@
     <li><strong>Copies:</strong> {{ num_instances }}</li>
     <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
     <li><strong>Authors:</strong> {{ num_authors }}</li>
+    
   </ul>
+
+  <p>
+    You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.
+  </p>
+  <br>
+
+  <p id="currentDateTime"></p>
+
+  <script>
+    // JavaScript code to display current date and time
+    var currentDateTime = new Date();
+    document.getElementById("currentDateTime").textContent = "Current date and time: " + currentDateTime;
+  </script>
 {% endblock %}
