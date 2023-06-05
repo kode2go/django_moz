@@ -40,6 +40,13 @@ from django.conf.urls.static import static
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
+from . import views
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import PasswordChangeView, PasswordChangeDoneView
+
 urlpatterns += [
     path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/profile/', login_required(views.profile), name='profile'),
+    path('accounts/password/change/', PasswordChangeView.as_view(), name='password_change'),
+    path('accounts/password/change/done/', PasswordChangeDoneView.as_view(), name='password_change_done'),
 ]

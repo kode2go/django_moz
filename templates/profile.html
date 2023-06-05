@@ -1,0 +1,11 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+    <h1>Profile</h1>
+    <p>Welcome, {{ request.user.username }}!</p>
+    <p>Email: {{ request.user.email }}</p>
+    <p>First Name: {{ request.user.first_name }}</p>
+    <p>Last Name: {{ request.user.last_name }}</p>
+    <p>Date Joined: {{ request.user.date_joined }}</p>
+    <!-- Add any other user information you want to display -->
+{% endblock %}
